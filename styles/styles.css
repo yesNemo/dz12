@@ -1,0 +1,145 @@
+*{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: all .3s ease-in;
+}
+.container{
+    /*max-width: 1170px;*/
+    /*width: 100%;*/
+    /*padding-right: 15px;*/
+    /*padding-left: 15px;*/
+    /*border: 2px solid black ;*/
+    /*margin: 0 auto;*/
+}
+ul{
+    list-style: none;
+}
+/*BASITAGCEND*/
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+.photoalbum{
+    display: grid;
+    grid-template-columns:repeat(3, 1fr) ;
+    grid-template-rows:repeat(5, 1fr) ;
+    grid-template-areas:
+            "one two three"
+            "four two six"
+            "seven five six"
+            "seven eight eight"
+            "nine nine ten";
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    grid-gap: 30px;
+}
+.photo1{
+    grid-area: one;
+}
+.photo2{
+    grid-area: two;
+}
+.photo3{
+    grid-area: three;
+}
+.photo4{
+    grid-area: four;
+}
+.photo5{
+    grid-area: five;
+}
+.photo6{
+    grid-area: six;
+}
+.photo7{
+    grid-area: seven;
+}
+.photo8{
+    grid-area: eight;
+}
+.photo9{
+    grid-area: nine;
+}
+.photo10{
+    grid-area: ten;
+}
+
+/*HOW TO WORK THIS??*/
+.photo__alone{
+    position: relative;
+}
+.photo__alone::before{
+    position: absolute;
+    content:'';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(360deg, #241F24 0%, rgba(91, 91, 91, 0.447552) 34.11%, rgba(187, 186, 192, 0.26) 62.5%);
+    border-radius: 20px;
+    transition: 0.3s all;
+}
+.photo__alone:hover::before{
+    /*background: transparent;*/
+    opacity: 0;
+}
+.details{
+    display: flex;
+    align-items: center;
+    color: #fff;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 20px;
+}
+/*ADD HOVER ICONS*/
+.hoverconteiten{
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1;
+    padding: 20px;
+}
+.hoverconteiten img {
+    width: 40px;
+    height: 40px;
+    opacity: 0;
+    border-radius: 4px;
+    background: #E0E0E080;
+}
+.photo__alone:hover .hoverconteiten img{
+    opacity: 1;
+}
+.hoverconteiten img:hover{
+    background: #E0E0E0;
+}
+
+
+/*.hovericons::after{*/
+/*    content: '';*/
+/*    display: block;*/
+/*    max-width: 40px;*/
+/*    max-height: 40px;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    background: #E0E0E0;*/
+/*    border-radius: 4px;*/
+/*    background-size: 50px;*/
+/*    opacity: 0;*/
+/*}*/
+/*.hovericons:hover::before{*/
+/*    background: #E0E0E080;*/
+/*}*/
